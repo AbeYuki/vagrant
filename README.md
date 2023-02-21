@@ -7,6 +7,20 @@ vagrant for wsl
 https://www.virtualbox.org/wiki/Downloads
 
 ## wsl
+
+### configure wsl.conf
+```
+vim /etc/wsl.conf
+```
+[automount]にmetadataを追記することで、permitionの管理ができるようになる。
+```
+[boot]
+systemd=true
+
+[automount]
+options = "metadata"
+```
+
 ### install vagrant
 https://developer.hashicorp.com/vagrant/downloads
 
